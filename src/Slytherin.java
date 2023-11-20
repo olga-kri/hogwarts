@@ -5,7 +5,7 @@ public class Slytherin extends Hogwarts {
     private int ambition;
     private int resourcefulness;
     private int lustForPower;
-    final int facultySkill;
+
 
     public Slytherin (String student, int magicalPowers, int transgresson,  int cunning, int resoluteness, int ambition, int resourcefulness, int lustForPower) {
         super(student, magicalPowers, transgresson);
@@ -14,7 +14,7 @@ public class Slytherin extends Hogwarts {
         this.ambition = ambition;
         this.resourcefulness = resourcefulness;
         this.lustForPower = lustForPower;
-        this.facultySkill = cunning + resoluteness + ambition + resourcefulness + lustForPower;
+
     }
     // геттеры и сеттеры
     public int getCunning() {
@@ -37,9 +37,7 @@ public class Slytherin extends Hogwarts {
         return lustForPower;
     }
 
-    public int getFacultySkill() {
-        return facultySkill;
-    }
+
 
     public void setCunning(int cunning) {
         this.cunning = cunning;
@@ -71,13 +69,13 @@ public class Slytherin extends Hogwarts {
                 ", жажда власти" + lustForPower;
     }
 
-    public void WhoIsTheBestOnSlytherin(Slytherin student){
-        //   if (student.getClass() == Griffindor.class) {
-        //       Griffindor griffindor = (Griffindor) student;
-        //  }
-        if (this.getFacultySkill() > student.getFacultySkill()) {
+    public void whoIsTheBestOnSlytherin(Slytherin student){
+
+        if ((this.getCunning() + this.getResoluteness() + this.getAmbition() + this.getResourcefulness() + this.getLustForPower()) >
+                (student.getCunning() + student.getResoluteness() + student.getAmbition() + student.getResourcefulness() + student.getLustForPower())) {
             System.out.println("Студент Слизерин " + this.getStudent() + " имеет лучшие софтскиллы, нежели чем " +  student.getStudent());
-        } else if (this.facultySkill < student.facultySkill) {
+        } else if ((this.getCunning() + this.getResoluteness() + this.getAmbition() + this.getResourcefulness() + this.getLustForPower()) <
+                (student.getCunning() + student.getResoluteness() + student.getAmbition() + student.getResourcefulness() + student.getLustForPower())) {
             System.out.println("Студент Слизерин " + student.getStudent() + " имеет лучшие софтскиллы, нежели чем " +  this.getStudent());
         } else {
             System.out.println("Студенты Слизерин " + this.getStudent() + " и " + student.getStudent() + " равны по силам");

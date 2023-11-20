@@ -16,7 +16,7 @@ public class Main {
         Kogtevrun belbi = new Kogtevrun("Маркус Белби", 74, 74, 92, 88, 75, 94);
 
        System.out.println(potter);
-       potter.WhoIsTheBestOnGrifindor(greindger);
+       potter.whoIsTheBestOnGrifindor(greindger);
        uisly.whoIsTheBestInHogwarts(malfoy);
 
     }
